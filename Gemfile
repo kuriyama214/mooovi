@@ -40,3 +40,5 @@ end
 
 # pry
 gem 'pry-rails'
+gem 'mechanize'
+gem 'mini_magick'

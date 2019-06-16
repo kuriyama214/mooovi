@@ -9,6 +9,7 @@
       <%= csrf_meta_tags %>
     </meta>
   </head>
+  <!--ナビゲーションバー-->
   <body class="yj950-2">
     <div id="wrapper">
       <div id="yjContentsHeader">
@@ -25,14 +26,16 @@
           </div>
         </nav>
       </div>
+      <!--映画一覧-->
       <div class="bgcolor-white pt1em pb1em" id="contents">
         <%= yield %>
+        <!--ランキング-->
           <aside class="section">
             <h4 class="text-small hr-bottom--thin no-space-bottom">
-              <i class="icon-crown color-gray-light"></i>投稿ランキング
+              <i class="icon-crown color-gray-light">投稿ランキング</i>
             </h4>
             <ul class="listview listview--condensed text-small">
-              <% [].each.with_index(1) do |product, i| %>
+              <% @ranking.each.with_index(1) do |product, i| %>
               <li data-cinema-id="346394">
                 <a href="/products/<%= product.id %>">
                   <div class="box">
